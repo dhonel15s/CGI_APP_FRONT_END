@@ -1,3 +1,32 @@
+* {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-text {
+  font-weight: 500 !important;
+  color: black !important;
+  border-bottom: 3px solid transparent !important;
+}
+.nav-text.active {
+  border-bottom: 3px solid blueviolet !important;
+}
+
+.navbar-bg {
+  background-color: white;
+}
+
+.login-bg {
+  background-color: blueviolet;
+}
+
+.login-row {
+  height: 80vh;
+}
+
+.login-title {
+  border-bottom: 3px solid white;
+}
+
 .App {
   text-align: center;
 }
@@ -7,6 +36,30 @@
   pointer-events: none;
 }
 
+.submit-button{
+  background-color: yellow !important;
+  border: 0 !important;
+  font-weight: 700 !important;
+  font-size: 0.8rem !important;
+  letter-spacing: 2px;
+}
+
+.logout-button{
+  background-color: blueviolet !important;
+  border: 0 !important;
+}
+
+.card-title {
+  border-bottom: 3px solid blueviolet;
+}
+
+.card-subtitle {
+  font-weight: 800 !important;
+}
+
+.profile-img {
+  border: 3px solid blueviolet;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -36,3 +89,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+
