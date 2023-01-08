@@ -46,7 +46,7 @@ export default function AppNavbar(){
 		         <Nav.Link className="nav-text" as={ NavLink } to="/careerobjectives" end>Career Objectives</Nav.Link>
 		       </Nav.Item>
 		       <Nav.Item>
-		         <Nav.Link className="rounded-pill px-3 py-1 mx-2 text-white logout-button" as={ NavLink } to="/logout" end>Logout</Nav.Link>
+		         <Nav.Link className="rounded-pill px-3 py-1 mx-2 text-white violet-button" as={ NavLink } to="/logout" end>Logout</Nav.Link>
 		       </Nav.Item>
 		     </Nav>
 		   </Navbar>

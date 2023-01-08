@@ -1,6 +1,7 @@
 // IMPORT: DEPENDENCIES
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 // IMPORT: BOOTSTRAP ELEMENTS
 import { Tabs, Tab, Row, Col, Form, Button, Container } from 'react-bootstrap';
@@ -24,6 +25,9 @@ export default function CareerObjectives() {
 	const [targetDate, setTargetDate] = useState('');
 	const [completedDate, setCompletedDate] = useState('');
 
+	// USE NAVIGATE TO GO TO OTHER PAGE
+	const navigate = useNavigate();
+
 	// ACTIVE FETCHING OF ITEMS FROM DATABASE
 	useEffect(() =>{
 
@@ -41,7 +45,9 @@ export default function CareerObjectives() {
 	}, [items]);
 
 
-	const addItem = () =>{
+	const addItem = (event) =>{
+
+		event.preventDefault();
 
 		fetch(`${ process.env.REACT_APP_API_URL }/items/add`, {
 			method: "POST",
@@ -72,6 +78,8 @@ export default function CareerObjectives() {
 				setTargetDate('');
 				setCompletedDate('');
 
+				navigate("/careerobjectives");
+
 			}
 			else{
 				Swal.fire({
@@ -83,6 +91,15 @@ export default function CareerObjectives() {
 
 		});
 
+	}
+
+	function clearInput (){
+		setName('');
+		setDescription('');
+		setReason('');
+		setTargetDate('');
+		setCompletedDate('');
+	    
 	}
 
 
@@ -98,8 +115,8 @@ export default function CareerObjectives() {
 
 				<Tab eventKey="add" title="Add Item" className="text-dark">
 					<Row>
-					<Col xs={10} md={8} className="border border-light-subtle rounded-2 mx-auto my-5">
-					<Form className="p-3" onSubmit={(e)=> addItem()}>
+					<Col xs={10} md={8} className="border border-light-subtle rounded-4 violet-bg text-white mx-auto my-5">
+					<Form className="p-3" onSubmit={(e)=> addItem(e)}>
 						<Form.Group className="mb-3">
 					    	<Form.Label>Item Name</Form.Label>
 					        <Form.Control
@@ -159,7 +176,10 @@ export default function CareerObjectives() {
 					    </Form.Group>
 
 					    <Container className="d-flex flex-row-reverse">
-					    <Button variant="primary" type="submit" className="rounded-pill logout-button mx-2 py-1 px-4">
+					    <Button variant="primary" type="button" className="rounded-pill red-button mx-2 py-1 px-4" onClick={()=> clearInput()}>
+					        Clear
+					    </Button>
+					    <Button variant="primary" type="submit" className="rounded-pill yellow-button text-dark mx-2 py-1 px-4">
 					        Add item
 					    </Button>
 					    </Container>
@@ -169,11 +189,6 @@ export default function CareerObjectives() {
 				</Tab>
 			</Tabs>
 
-			
-			{/*<Row>
-			
-			</Row>
-			<Row className="mb-5">{products}</Row>*/}
 		</>
 	)
 }

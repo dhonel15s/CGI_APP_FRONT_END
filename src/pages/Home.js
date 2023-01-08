@@ -4,10 +4,11 @@ import { Row, Col, Image, ListGroup } from 'react-bootstrap';
 // IMPORT: CSS
 import "../App.css";
 
+// HOME FUNCTION MAIN --------------------------------------------------------------
 export default function Home(){
 	return(
 		<>
-		<Row className="shadow-sm border border-light-subtle rounded-2 p-3 m-3">
+		<Row className="shadow-sm border border-light-subtle rounded-4 p-3 m-3 violet-bg text-white">
 			<Col className="p-5 p-md-2" xs={12} md={4}>
 				<Image src={require('../assets/id.jpg')} height="200" className="profile-img d-block mx-auto rounded-circle shadow-sm"/>
 			</Col>
@@ -22,12 +23,12 @@ export default function Home(){
 		</Row>
 
 		<Row className="p-3 p-md-0 mt-0 mt-md-5">
-			<Col className="p-5 mx-auto my-4 my-md-0 shadow-sm border border-light-subtle rounded-2" xs={12} md={5}>
+			<Col className="p-5 mx-auto my-4 my-md-0 shadow-sm border border-light-subtle rounded-4 violet-bg text-white" xs={12} md={5}>
 				<h5 className="card-title mb-3">ABOUT ME</h5>
 				<p>I am an innovative, task-driven, and reliable individual who aspires to become a <strong>Web Developer</strong>. With my passion for coding and strong set of skills, I am currently searching for an organization where I can utilize my skills, bring value-added service to clients, and take part in developing useful web applications that have impact on the community. I am aiming to become a Senior Full-Stack Developer in the long run.</p>
 			</Col>
 
-			<Col className="p-5 mx-auto my-4 my-md-0 shadow-sm border border-light-subtle rounded-2" xs={12} md={6}>
+			<Col className="p-5 mx-auto my-4 my-md-0 shadow-sm border border-light-subtle rounded-4 violet-bg text-white" xs={12} md={6}>
 				<h5 className="card-title mb-3">EDUCATION</h5>
 
 				<ol className="list-group list-group-numbered">
@@ -36,35 +37,35 @@ export default function Home(){
 				      <div className="fw-bold">Zuitt: Java Development Program</div>
 				      Postgraduate/ Certificate – Course Completer
 				    </div>
-				    <span className="badge bg-primary rounded-pill">2022</span>
+				    <span className="badge rounded-pill violet-button">2022</span>
 				  </li>
 				  <li className="list-group-item d-flex justify-content-between align-items-start">
 				    <div className="ms-2 me-auto">
 				      <div className="fw-bold">Zuitt: Web Developer Program (MERN Stack)</div>
 				      Postgraduate/ Certificate – Course Completer
 				    </div>
-				    <span className="badge bg-primary rounded-pill">2022</span>
+				    <span className="badge rounded-pill violet-button">2022</span>
 				  </li>
 				  <li className="list-group-item d-flex justify-content-between align-items-start">
 				    <div className="ms-2 me-auto">
 				      <div className="fw-bold">BS Computer Science</div>
 				      Bicol University – Polangui Campus
 				    </div>
-				    <span className="badge bg-primary rounded-pill">2019</span>
+				    <span className="badge rounded-pill violet-button">2019</span>
 				  </li>
 				  <li className="list-group-item d-flex justify-content-between align-items-start">
 				    <div className="ms-2 me-auto">
 				      <div className="fw-bold">Highschool</div>
 				      Capitolina O. Legaspi Memorial High School
 				    </div>
-				    <span className="badge bg-primary rounded-pill">2015</span>
+				    <span className="badge rounded-pill violet-button">2015</span>
 				  </li>
 				</ol>
 				
 			</Col>
 		</Row>
 
-		<Row className="shadow-sm border border-light-subtle rounded-2 p-3 p-md-5 m-3">
+		<Row className="shadow-sm border border-light-subtle rounded-4 p-4 p-md-5 my-5 mx-3 violet-bg text-white">
 			<h5 className="card-title mb-3">SKILLS</h5>
 			
 			<Col xs={12} md={4} className="p-1 p-md-4">
@@ -147,7 +148,7 @@ export default function Home(){
 			</Col>
 		</Row>
 
-		<Row className="shadow-sm border border-light-subtle rounded-2 p-3 p-md-5 m-3">
+		<Row className="shadow-sm border border-light-subtle rounded-4 p-4 p-md-5 my-5 mx-3 violet-bg text-white">
 					<h5 className="card-title mb-3">WORK EXPERIENCE</h5>
 					
 					<Col xs={12} className="p-1 my-3 my-md-1 p-md-4">

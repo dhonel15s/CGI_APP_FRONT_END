@@ -46,7 +46,7 @@ export default function ItemCard({itemProp}) {
     // ITEM CARD MAIN DESIGN------------------------------------------------------------------
     return (
         <Col xs={12} md={10} className="mx-auto my-3 px-3 px-md-5">
-        	<Card className="shadow-sm">
+        	<Card className="shadow-sm violet-bg text-white rounded-4">
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text >
@@ -56,11 +56,14 @@ export default function ItemCard({itemProp}) {
                         <strong>Completed Date: </strong>{completedDate}
                     </Card.Text>
                     <Container className="d-flex flex-row-reverse">
-                        <Button className="rounded-pill logout-button mx-2 py-1 px-4">Modify</Button>
                         <Button
-                            className="rounded-pill logout-button mx-2 py-1 px-4"
+                            className="shadow-sm rounded-pill red-button mx-2 py-1 px-4 border border-0"
                             onClick={()=> deleteItem(_id)}
                         >Delete</Button>
+                        <Button
+                            className="shadow-sm rounded-pill yellow-button mx-2 py-1 px-4 border border-0 text-dark"
+                            as={Link} to={`/careerobjectives/update/${_id}`}
+                        >Modify</Button>
                     </Container>
                 </Card.Body>
             </Card>

@@ -13,9 +13,10 @@ import './App.css';
 
 // IMPORT: PAGES
 import Login from './pages/Login.js';
-import Home from './pages/Home.js';
 import Logout from './pages/Logout.js';
+import Home from './pages/Home.js';
 import CareerObjectives from './pages/CareerObjectives.js';
+import UpdateItem from './pages/UpdateItem.js';
 
 // IMPORT: COMPONENTS
 import AppNavbar from './components/AppNavbar.js';
@@ -100,6 +101,7 @@ function App() {
               <Route exact path="/" element={<Home/>}/>
               <Route exact path="/home" element={<Home/>}/>
               <Route exact path="/careerobjectives" element={<CareerObjectives/>}/>
+              <Route exact path="/careerobjectives/update/:itemId" element={<UpdateItem/>}/>
               <Route exact path="/logout" element={<Logout/>}/>
               <Route exact path="*" element={<Home/>}/>
             </Routes>
